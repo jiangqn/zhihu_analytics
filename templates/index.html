@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>知乎分析站</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body>
+    <h1>
+        <img alt="Zhihu Analytics" class="kenan" src="{{ url_for('static', filename='images/kenan.jpg') }}">
+        知乎分析站 Zhuhu Analytics
+    </h1>
+    <form method="post">  <!-- 指定提交方法为 POST -->
+        <label for="question_id"><h2 class="hh">知乎问题id</h2></label>
+        <input type="text" name="question_id" id="question_id" autocomplete="off" required>
+        <input class="button" type="submit" name="submit" value="分析"> 
+    </form>
+    <img alt="wordcloud" class="wordcloud" src="{{ url_for('static', filename='zhihu.png') }}">
+    <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='images/totoro.gif') }}">
+    <footer>
+        <small>&copy; 2021 知乎分析站 Zhuhu Analytics</small>
+    </footer>
+</body>
+</html>
