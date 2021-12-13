@@ -55,8 +55,9 @@ def normal_cut_sentence(text):
     text = re.sub('([.。！？\?\.{6}\…{2}][’”])([^’”])',r'\1\n\2',text)#断句号+引号且后面没有引号
     return text.split("\n")
 
+stopwords = load_stopwords(stopwords_path)
+
 def create_wordcloud(question_id: int) -> None:
-    stopwords = load_stopwords(stopwords_path)
     answers = get_answers(question_id)
 
     words = []
